@@ -38,16 +38,26 @@ function Filter() {
         </div>
         <div className="item">
           <label htmlFor="minPrice">Min Price</label>
-          <input type="number" id="minPrice" name="minPrice" placeholder="any" />
+          <input
+            type="number"
+            id="minPrice"
+            name="minPrice"
+            placeholder="any"
+          />
         </div>
         <div className="item">
           <label htmlFor="maxPrice">Max Price</label>
-          <input type="number" id="maxPrice" name="maxPrice" placeholder="any" />
+          <input
+            type="number"
+            id="maxPrice"
+            name="maxPrice"
+            placeholder="any"
+          />
         </div>
+        <button>
+          <img src="search.png" alt="" />
+        </button>
       </div>
-      <button>
-        <img src="search.png" alt="" />
-      </button>
     </div>
   );
 }
