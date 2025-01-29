@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./slider.scss";
 
 function Slider({ images }) {
-  const [imgIndx, setImgIndx] = useState(0);
+  const [imgIndx, setImgIndx] = useState(null);
 
   const changeSlide = (direction) => {
     if( direction == "left") {
