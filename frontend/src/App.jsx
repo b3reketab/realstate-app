@@ -4,7 +4,7 @@ import ListPage from "./routes/ListPage/Listpage";
 import { Layout, RequireAuth } from "./routes/Layout/Layout";
 import SinglePage from "./routes/SinglePage/SinglePage";
 import ProfilePage from "./routes/profilePage/profilePage";
-import Login from "./routes/Login/Login";
+import Login from "./routes/login/login";
 import Register from "./routes/register/register";
 import ProfileUpdatePage from "./routes/profileUpdatePage/profileUpdatePage";
 import NewPostPage from "./routes/newPostPage/newPostPage";
@@ -30,6 +30,7 @@ function App() {
           element: <SinglePage />,
           loader: singlePageLoader,
         },
+
         {
           path: "/login",
           element: <Login />,

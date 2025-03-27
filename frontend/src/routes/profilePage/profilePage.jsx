@@ -6,7 +6,7 @@ import { Await, Link, useLoaderData, useNavigate } from "react-router-dom";
 import { Suspense, useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 
-function ProfilePage() {
+function profilePage() {
   const data = useLoaderData();
 
   const { updateUser, currentUser } = useContext(AuthContext);
@@ -88,4 +88,4 @@ function ProfilePage() {
   );
 }
 
-export default ProfilePage;
+export default profilePage;

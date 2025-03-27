@@ -1,7 +1,7 @@
 import prisma from "../lib/prisma.js";
 
 export const getChats = async (req, res) => {
-  const tokenUserId = req.userId;
+  const tokenUserId = req.tokenUserId;
 
   try {
     const chats = await prisma.chat.findMany({
@@ -81,6 +81,8 @@ export const addChat = async (req, res) => {
       },
     });
     res.status(200).json(newChat);
+    console.log(newChat);
+    
   } catch (err) {
     console.log(err);
     res.status(500).json({ message: "Failed to add chat!" });
