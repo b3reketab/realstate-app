@@ -1,9 +1,14 @@
-import SearchBar from "../../components/searchbar/SearchBar";
-import "./homepage.scss";
+import { useContext } from "react";
+import SearchBar from "../../components/searchBar/SearchBar";
+import "./homePage.scss";
+import { AuthContext } from "../../context/AuthContext";
 
-function Homepage() {
+function HomePage() {
+
+  const {currentUser} = useContext(AuthContext)
+
   return (
-    <div className="homepage">
+    <div className="homePage">
       <div className="textContainer">
         <div className="wrapper">
           <h1 className="title">Find Real Estate & Get Your Dream Place</h1>
@@ -31,10 +36,10 @@ function Homepage() {
         </div>
       </div>
       <div className="imgContainer">
-        <img src="./bg.png" alt="" />
+        <img src="/bg.png" alt="" />
       </div>
     </div>
   );
 }
 
-export default Homepage;
+export default HomePage;
