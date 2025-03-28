@@ -45,6 +45,10 @@ export const getPost = async (req, res) => {
 
     const token = req.cookies?.token;
 
+    if (!post) {
+      return res.status(404).json({ message: "Post not found" });
+    }
+    
     if (token) {
       jwt.verify(token, process.env.JWT_SECRET_KEY, async (err, payload) => {
         if (!err) {
