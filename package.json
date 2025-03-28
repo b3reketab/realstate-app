@@ -2,6 +2,6 @@
   "name": "realstate-app",
   "version": "1.0.0",
   "scripts": {
-    "deploy": "cd client && npm run build && npm run deploy"
+    "deploy": "cd frontend && npm run build && npm run deploy"
   }
 }

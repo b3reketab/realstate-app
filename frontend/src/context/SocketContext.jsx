@@ -2,6 +2,8 @@ import { createContext, useContext, useEffect, useState } from "react";
 import { io } from "socket.io-client";
 import { AuthContext } from "./AuthContext";
 
+const SOCKET_URL = import.meta.env.VITE_SOCKET_URL;
+
 export const SocketContext = createContext();
 
 export const SocketContextProvider = ({ children }) => {
@@ -9,7 +11,7 @@ export const SocketContextProvider = ({ children }) => {
   const [socket, setSocket] = useState(null);
 
   useEffect(() => {
-    setSocket(io("http://localhost:4000"));
+    setSocket(io(SOCKET_URL));
   }, []);
 
   useEffect(() => {

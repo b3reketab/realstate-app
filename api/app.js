@@ -10,7 +10,10 @@ import messageRoute from "./routes/message.route.js";
 
 const app = express();
 
-app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }));
+app.use(cors({
+  origin: 'https://b3reketab.github.io',
+  credentials: true // if you're using cookies or auth
+}));
 app.use(express.json());
 app.use(cookieParser());
 

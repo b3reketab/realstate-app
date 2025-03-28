@@ -2,8 +2,10 @@ import { Server } from "socket.io";
 
 const io = new Server({
   cors: {
-    origin: "http://localhost:5173",
-  },
+    origin: 'https://b3reketab.github.io',
+    methods: ['GET', 'POST'],
+    credentials: true
+  }
 });
 
 let onlineUser = [];
