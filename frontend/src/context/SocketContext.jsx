@@ -11,7 +11,12 @@ export const SocketContextProvider = ({ children }) => {
   const [socket, setSocket] = useState(null);
 
   useEffect(() => {
-    setSocket(io(SOCKET_URL));
+    const newSocket = io(SOCKET_URL, { withCredentials: true });
+    setSocket(newSocket);
+  
+    return () => {
+      newSocket.disconnect();
+    };
   }, []);
 
   useEffect(() => {

@@ -52,26 +52,22 @@ function Chat({ chats }) {
   };
 
   useEffect(() => {
-    const read = async () => {
-      try {
-        await apiRequest.put("/chats/read/" + chat.id);
-      } catch (err) {
-        console.log(err);
+    if (!socket || !chat) return;
+  
+    const handleMessage = async (data) => {
+      if (chat.id === data.chatId) {
+        setChat((prev) => ({ ...prev, messages: [...prev.messages, data] }));
+        try {
+          await apiRequest.put("/chats/read/" + chat.id);
+        } catch (err) {
+          console.log(err);
+        }
       }
     };
-
-    if (chat && socket) {
-      socket.on("getMessage", (data) => {
-        if (chat.id === data.chatId) {
-          setChat((prev) => ({ ...prev, messages: [...prev.messages, data] }));
-          read();
-        }
-      });
-    }
-    return () => {
-      socket.off("getMessage");
-    };
-  }, [socket, chat]);
+  
+    socket.on("getMessage", handleMessage);
+    return () => socket.off("getMessage", handleMessage);
+  }, [socket, chat?.id]);  
 
   return (
     <div className="chat">
