@@ -48,7 +48,7 @@ Property Details Page – Shows full details of a selected property including ut
 ![](images/update-profile-page.png)
 ![](images/list-page.png)
 ![](images/single-page.png)
-![](images/add-place.png)
+![](images/add-place-page.png)
 
 
 <h2>Development</h2>
