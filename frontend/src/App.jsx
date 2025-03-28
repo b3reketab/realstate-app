@@ -26,7 +26,7 @@ function App() {
           loader: listPageLoader,
         },
         {
-          path: "/:id",
+          path: "/posts/:id",
           element: <SinglePage />,
           loader: singlePageLoader,
         },
