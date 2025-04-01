@@ -37,7 +37,7 @@ function SinglePage() {
               <div className="post">
                 <h1>{post.title}</h1>
                 <div className="address">
-                  <img src="/pin.png" alt="" />
+                  <img src="../../assets/pin.png" alt="" />
                   <span>{post.address}</span>
                 </div>
                 <div className="price">$ {post.price}</div>
@@ -61,7 +61,7 @@ function SinglePage() {
           <p className="title">General</p>
           <div className="listVertical">
             <div className="feature">
-              <img src="/utility.png" alt="" />
+              <img src="../../assets/utility.png" alt="" />
               <div className="featureText">
                 <span>Utilities</span>
                 {post.postDetail.utilities === "owner" ? (
@@ -72,7 +72,7 @@ function SinglePage() {
               </div>
             </div>
             <div className="feature">
-              <img src="/pet.png" alt="" />
+              <img src="../../assets/pet.png" alt="" />
               <div className="featureText">
                 <span>Pet Policy</span>
                 {post.postDetail.pet === "allowed" ? (
@@ -83,7 +83,7 @@ function SinglePage() {
               </div>
             </div>
             <div className="feature">
-              <img src="/fee.png" alt="" />
+              <img src="../../assets/fee.png" alt="" />
               <div className="featureText">
                 <span>Income Policy</span>
                 <p>{post.postDetail.income}</p>
@@ -93,22 +93,22 @@ function SinglePage() {
           <p className="title">Sizes</p>
           <div className="sizes">
             <div className="size">
-              <img src="/size.png" alt="" />
+              <img src="../../assets/size.png" alt="" />
               <span>{post.postDetail.size} sqft</span>
             </div>
             <div className="size">
-              <img src="/bed.png" alt="" />
+              <img src="../../assets/bed.png" alt="" />
               <span>{post.bedroom} beds</span>
             </div>
             <div className="size">
-              <img src="/bath.png" alt="" />
+              <img src="../../assets/bath.png" alt="" />
               <span>{post.bathroom} bathroom</span>
             </div>
           </div>
           <p className="title">Nearby Places</p>
           <div className="listHorizontal">
             <div className="feature">
-              <img src="/school.png" alt="" />
+              <img src="../../assets/school.png" alt="" />
               <div className="featureText">
                 <span>School</span>
                 <p>
@@ -120,14 +120,14 @@ function SinglePage() {
               </div>
             </div>
             <div className="feature">
-              <img src="/pet.png" alt="" />
+              <img src="../../assets/pet.png" alt="" />
               <div className="featureText">
                 <span>Bus Stop</span>
                 <p>{post.postDetail.bus}m away</p>
               </div>
             </div>
             <div className="feature">
-              <img src="/fee.png" alt="" />
+              <img src="../../assets/fee.png" alt="" />
               <div className="featureText">
                 <span>Restaurant</span>
                 <p>{post.postDetail.restaurant}m away</p>
@@ -140,7 +140,7 @@ function SinglePage() {
           </div>
           <div className="buttons">
             <button>
-              <img src="/chat.png" alt="" />
+              <img src="../../assets/chat.png" alt="" />
               Send a Message
             </button>
             <button
@@ -149,7 +149,7 @@ function SinglePage() {
                 backgroundColor: saved ? "#fece51" : "white",
               }}
             >
-              <img src="/save.png" alt="" />
+              <img src="../../assets/save.png" alt="" />
               {saved ? "Place Saved" : "Save the Place"}
             </button>
           </div>

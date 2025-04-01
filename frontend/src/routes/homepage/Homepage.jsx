@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import SearchBar from "../../components/searchBar/SearchBar";
+import SearchBar from "../../components/searchbar/SearchBar";
 import "./homePage.scss";
 import { AuthContext } from "../../context/AuthContext";
 
@@ -36,7 +36,7 @@ function HomePage() {
         </div>
       </div>
       <div className="imgContainer">
-        <img src="/bg.png" alt="" />
+        <img src="../../assets/bg.png" alt="" />
       </div>
     </div>
   );

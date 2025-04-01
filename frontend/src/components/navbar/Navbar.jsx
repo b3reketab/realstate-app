@@ -18,7 +18,7 @@ function Navbar() {
     <nav>
       <div className="left">
         <a href="/" className="logo">
-          <img src="/logo.png" alt="" />
+          <img src="../../assets/logo.png" alt="" />
           <span>BekaEstate</span>
         </a>
         <a href="/">Home</a>
@@ -46,7 +46,7 @@ function Navbar() {
         )}
         <div className="menuIcon">
           <img
-            src="/menu.png"
+            src="../../assets/menu.png"
             alt=""
             onClick={() => setOpen((prev) => !prev)}
           />
