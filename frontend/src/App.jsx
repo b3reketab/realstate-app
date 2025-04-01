@@ -25,11 +25,6 @@ function App() {
           element: <ListPage />,
           loader: listPageLoader,
         },
-        {
-          path: "/:id",
-          element: <SinglePage />,
-          loader: singlePageLoader,
-        },
 
         {
           path: "/login",
