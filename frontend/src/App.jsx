@@ -17,13 +17,18 @@ function App() {
       element: <Layout />,
       children: [
         {
-          path: "/",
+          path: "/posts/real-state",
           element: <HomePage />,
         },
         {
           path: "/list",
           element: <ListPage />,
           loader: listPageLoader,
+        },
+        {
+          path: "/:id",
+          element: <SinglePage />,
+          loader: singlePageLoader,
         },
 
         {
