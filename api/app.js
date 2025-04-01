@@ -17,7 +17,7 @@ const server = http.createServer(app);
 // ✅ Socket.IO server config
 const io = new Server(server, {
   cors: {
-    origin: 'https://b3reketab.github.io',
+    origin: 'https://b3reketab.github.io/',
     methods: ['GET', 'POST'],
     credentials: true
   }
@@ -25,7 +25,7 @@ const io = new Server(server, {
 
 // ✅ Express middleware
 app.use(cors({
-  origin: 'https://b3reketab.github.io',
+  origin: 'https://b3reketab.github.io/',
   credentials: true
 }));
 app.use(express.json());
