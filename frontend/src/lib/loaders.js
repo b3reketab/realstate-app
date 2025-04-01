@@ -2,7 +2,7 @@ import { defer } from "react-router-dom";
 import apiRequest from "./apiRequest";
 
 export const singlePageLoader = async ({ request, params }) => {
-  const res = await apiRequest(`/posts/${params.id}`);
+  const res = await apiRequest('/');
   return res.data;
 };
 export const listPageLoader = async ({ request, params }) => {
