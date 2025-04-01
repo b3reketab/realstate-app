@@ -44,7 +44,7 @@ function ProfileUpdatePage() {
               id="username"
               name="username"
               type="text"
-              defaultValue={currentUser.username || "Nobody"}
+              defaultValue={currentUser?.username || "Guest"}
             />
           </div>
           <div className="item">

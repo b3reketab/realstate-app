@@ -44,7 +44,7 @@ function SinglePage() {
               </div>
               <div className="user">
                 <img src={post.user} alt="" />
-                <span>{post.user.username || "Nobody"}</span>
+                <span>{post.user?.username || "Guest"}</span>
               </div>
             </div>
             <div
