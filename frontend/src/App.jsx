@@ -1,4 +1,4 @@
-import HomePage from "./routes/homePage/homePage";
+import Homepage from "./routes/homepage/Homepage"
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ListPage from "./routes/ListPage/Listpage";
 import { Layout, RequireAuth } from "./routes/Layout/Layout";
@@ -17,8 +17,8 @@ function App() {
       element: <Layout />,
       children: [
         {
-          path: "/posts/real-state",
-          element: <HomePage />,
+          path: "/",
+          element: <Homepage />,
         },
         {
           path: "/list",
