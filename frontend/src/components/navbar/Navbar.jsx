@@ -3,6 +3,8 @@ import "./navbar.scss";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import { useNotificationStore } from "../../lib/notificationStore";
+import logoIcon from "../../assets/logo.png";
+import menuIcon from "../../assets/menu.png";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -18,7 +20,7 @@ function Navbar() {
     <nav>
       <div className="left">
         <a href="/" className="logo">
-          <img src="../../assets/logo.png" alt="" />
+          <img src={logoIcon} alt="" />
           <span>BekaEstate</span>
         </a>
         <a href="/">Home</a>
@@ -46,7 +48,7 @@ function Navbar() {
         )}
         <div className="menuIcon">
           <img
-            src="../../assets/menu.png"
+            src={menuIcon}
             alt=""
             onClick={() => setOpen((prev) => !prev)}
           />

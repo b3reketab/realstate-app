@@ -1,5 +1,6 @@
 import "./login.scss";
 import { Link } from "react-router-dom";
+import bgIcon from "../../assets/bg.png";
 
 function Login() {
   return (
@@ -14,7 +15,7 @@ function Login() {
         </form>
       </div>
       <div className="imgContainer">
-        <img src="../../assets/bg.png" alt="" />
+        <img src={bgIcon} alt="" />
       </div>
     </div>
   );

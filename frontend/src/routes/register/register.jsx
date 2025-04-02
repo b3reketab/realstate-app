@@ -2,6 +2,7 @@ import "./register.scss";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import apiRequest from "../../lib/apiRequest";
+import bgIcon from "../../assets/bg.png";
 
 function Register() {
   const [error, setError] = useState("");
@@ -50,7 +51,7 @@ function Register() {
         </form>
       </div>
       <div className="imgContainer">
-        <img src="../../assets/bg.png" alt="" />
+        <img src={bgIcon} alt="" />
       </div>
     </div>
   );

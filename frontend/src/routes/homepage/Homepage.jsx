@@ -2,6 +2,7 @@ import { useContext } from "react";
 import SearchBar from "../../components/searchbar/SearchBar";
 import "./homePage.scss";
 import { AuthContext } from "../../context/AuthContext";
+import bgIcon from "../../assets/bg.png";
 
 function HomePage() {
 
@@ -36,7 +37,7 @@ function HomePage() {
         </div>
       </div>
       <div className="imgContainer">
-        <img src="../../assets/bg.png" alt="" />
+        <img src={bgIcon} alt="" />
       </div>
     </div>
   );

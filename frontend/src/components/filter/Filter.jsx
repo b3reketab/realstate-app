@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./filter.scss";
 import { useSearchParams } from "react-router-dom";
+import searchIcon from "../../assets/search.png";
 
 function Filter() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -105,7 +106,7 @@ function Filter() {
           />
         </div>
         <button onClick={handleFilter}>
-          <img src="../../assests/search.png" alt="" />
+          <img src={searchIcon} alt="" />
         </button>
       </div>
     </div>

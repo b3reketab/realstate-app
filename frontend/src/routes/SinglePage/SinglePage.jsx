@@ -6,6 +6,16 @@ import DOMPurify from "dompurify";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import apiRequest from "../../lib/apiRequest";
+import pinIcon from "../../assets/pin.png";
+import utilityIcon from "../../assets/utility.png";
+import petIcon from "../../assets/pet.png";
+import feeIcon from "../../assets/fee.png";
+import sizeIcon from "../../assets/size.png";
+import schoolIcon from "../../assets/school.png";
+import bedIcon from "../../assets/bed.png";
+import bathIcon from "../../assets/bath.png";
+import saveIcon from "../../assets/save.png";
+import chatIcon from "../../assets/chat.png";
 
 function SinglePage() {
   const post = useLoaderData();
@@ -37,7 +47,7 @@ function SinglePage() {
               <div className="post">
                 <h1>{post.title}</h1>
                 <div className="address">
-                  <img src="../../assets/pin.png" alt="" />
+                  <img src={pinIcon} alt="" />
                   <span>{post.address}</span>
                 </div>
                 <div className="price">$ {post.price}</div>
@@ -61,7 +71,7 @@ function SinglePage() {
           <p className="title">General</p>
           <div className="listVertical">
             <div className="feature">
-              <img src="../../assets/utility.png" alt="" />
+              <img src={utilityIcon} alt="" />
               <div className="featureText">
                 <span>Utilities</span>
                 {post.postDetail.utilities === "owner" ? (
@@ -72,7 +82,7 @@ function SinglePage() {
               </div>
             </div>
             <div className="feature">
-              <img src="../../assets/pet.png" alt="" />
+              <img src={petIcon} alt="" />
               <div className="featureText">
                 <span>Pet Policy</span>
                 {post.postDetail.pet === "allowed" ? (
@@ -83,7 +93,7 @@ function SinglePage() {
               </div>
             </div>
             <div className="feature">
-              <img src="../../assets/fee.png" alt="" />
+              <img src={feeIcon} alt="" />
               <div className="featureText">
                 <span>Income Policy</span>
                 <p>{post.postDetail.income}</p>
@@ -93,22 +103,22 @@ function SinglePage() {
           <p className="title">Sizes</p>
           <div className="sizes">
             <div className="size">
-              <img src="../../assets/size.png" alt="" />
+              <img src={sizeIcon} alt="" />
               <span>{post.postDetail.size} sqft</span>
             </div>
             <div className="size">
-              <img src="../../assets/bed.png" alt="" />
+              <img src={bedIcon} alt="" />
               <span>{post.bedroom} beds</span>
             </div>
             <div className="size">
-              <img src="../../assets/bath.png" alt="" />
+              <img src={bathIcon} alt="" />
               <span>{post.bathroom} bathroom</span>
             </div>
           </div>
           <p className="title">Nearby Places</p>
           <div className="listHorizontal">
             <div className="feature">
-              <img src="../../assets/school.png" alt="" />
+              <img src={schoolIcon} alt="" />
               <div className="featureText">
                 <span>School</span>
                 <p>
@@ -120,14 +130,14 @@ function SinglePage() {
               </div>
             </div>
             <div className="feature">
-              <img src="../../assets/pet.png" alt="" />
+              <img src={petIcon} alt="" />
               <div className="featureText">
                 <span>Bus Stop</span>
                 <p>{post.postDetail.bus}m away</p>
               </div>
             </div>
             <div className="feature">
-              <img src="../../assets/fee.png" alt="" />
+              <img src={feeIcon} alt="" />
               <div className="featureText">
                 <span>Restaurant</span>
                 <p>{post.postDetail.restaurant}m away</p>
@@ -140,7 +150,7 @@ function SinglePage() {
           </div>
           <div className="buttons">
             <button>
-              <img src="../../assets/chat.png" alt="" />
+              <img src={chatIcon} alt="" />
               Send a Message
             </button>
             <button
@@ -149,7 +159,7 @@ function SinglePage() {
                 backgroundColor: saved ? "#fece51" : "white",
               }}
             >
-              <img src="../../assets/save.png" alt="" />
+              <img src={saveIcon} alt="" />
               {saved ? "Place Saved" : "Save the Place"}
             </button>
           </div>

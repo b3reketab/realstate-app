@@ -60,6 +60,9 @@ function App() {
         },
       ],
     },
+    {
+      basename: "/realstate-app", // 👈 important
+    }
   ]);
 
   return <RouterProvider router={router} />;
